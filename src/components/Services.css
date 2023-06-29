@@ -1,0 +1,19 @@
+.services-container {
+    padding: 20px;
+  }
+  
+  .services-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .services-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .services-container li {
+    margin-bottom: 5px;
+  }
+  
