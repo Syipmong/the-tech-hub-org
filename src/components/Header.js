@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 import logo from '../assets/images/logo.png';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="header">
+    <header className={`header ${isMenuOpen ? 'open' : ''}`}>
       <Link to="/" className="logo">
         <img src={logo} alt="The Tech Hub Logo" />
       </Link>
 
-      <nav className="menu">
+      <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <ul className="menu-list">
           <li className="menu-item">
             <Link to="/">Home</Link>
@@ -24,17 +33,19 @@ const Header = () => {
           <li className="menu-item">
             <Link to="/articles">Articles</Link>
           </li>
-          {/* <li className="menu-item">
-            <Link to="/tutor">Tutor</Link>
-          </li>
-          <li className="menu-item">
-            <Link to="/student">Student</Link>
-          </li> */}
           <li className="menu-item">
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
+
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isMenuOpen ? (
+          <FontAwesomeIcon icon={faTimesCircle} />
+        ) : (
+          <FontAwesomeIcon icon={faBars} />
+        )}
+      </button>
     </header>
   );
 };
