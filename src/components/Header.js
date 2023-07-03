@@ -41,9 +41,9 @@ const Header = () => {
 
       <button className="menu-toggle" onClick={toggleMenu}>
         {isMenuOpen ? (
-          <FontAwesomeIcon icon={faTimesCircle} />
+          <FontAwesomeIcon className='side_btn' icon={faTimesCircle} />
         ) : (
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon className='side_btn' icon={faBars} />
         )}
       </button>
     </header>
