@@ -1,14 +1,9 @@
 
-/* *{
-  border: 1px solid white;
-} */
-
 .header {
   background-color: #222;
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .logo img {
@@ -69,16 +64,10 @@
 .side_btn {
   display: block;
   font-size: 1.5rem;
-  /* width: 20px; */
-  /* height: 2px; */
-  /* background-color: #fff; */
-  /* margin-bottom: 4px; */
 }
 
 @media (max-width: 768px) {
   .header {
-    /* flex-direction: column; */
-    /* align-items: center; */
     padding: 10px;
     height: max-content;
   }
@@ -91,7 +80,6 @@
     position: relative;
     display: block;
     margin-top: 3em;
-    /* flex-direction: column; */
   }
 
   .menu-list {
@@ -106,6 +94,5 @@
     height: 100%;
     display: block;
     transform: translateY(40%);
-    /* margin-bottom: 10px; */
   }
 }
