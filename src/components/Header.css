@@ -1,6 +1,6 @@
 
 .header {
-  background-color: #222;
+  background-color: #D9D9D9;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@
 }
 
 .menu-item a {
-  color: #fff;
+  color: #FF0606;
   text-decoration: none;
   font-size: 16px;
 }
