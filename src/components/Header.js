@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logov2.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
