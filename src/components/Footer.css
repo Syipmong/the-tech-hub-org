@@ -1,3 +1,5 @@
+/* Footer.css */
+
 .footer {
   background-color: #D9D9D9;
   color: #1E1E1E;
@@ -7,12 +9,52 @@
   justify-content: space-between;
 }
 
-.footer-text {
+.footer-left {
   font-size: 14px;
 }
 
-.footer-text p {
-  margin: 0;
+.footer-left p {
+  color: #1E1E1E;
+text-align: center;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.footer-center p, .footer-mid-center p{
+  color: #1E1E1E;
+text-align: center;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.footer-center a, .footer-mid-center a{
+  text-decoration: none;
+  color: #1E1E1E;
+}
+
+.footer-left a {
+  color: #1E1E1E;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold; /* Add this to make the link bold */
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right a {
+  color: #1E1E1E;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold; /* Add this to make the link bold */
 }
 
 .social-icons a {
@@ -23,7 +65,7 @@
   background-color: #fff;
   padding: 8px;
   width: 30px;
-height: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
@@ -35,12 +77,12 @@ height: 30px;
     padding: 20px 0;
   }
 
-  .social-icons {
+  .footer-right {
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
-  .social-icons a {
+  .footer-right a {
     margin-right: 10px;
   }
 }

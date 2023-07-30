@@ -6,17 +6,30 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-text">
-        <p>Terms and Conditions | Privacy Policy</p>
-        <p>© 2023 The Tech Hub. All rights reserved.</p>
+      <div className="footer-left">
+        <p>
+          <a href="/terms">Terms and Conditions</a>
+        </p>
       </div>
-      <div className="social-icons">
-        <a href="https://www.linkedin.com/company/the-tech-hub-com/" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="https://www.twitter.com/thetechhuborg" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
+      <div className="footer-center">
+        <p>
+          <a href="/privacy">Privacy Policy</a>
+        </p>
+      </div>
+      <div className="footer-mid-center">
+        <p>
+          <a href="/contact">Contact Us</a>
+        </p>
+      </div>
+      <div className="footer-right">
+        <div className="social-icons">
+          <a href="https://www.linkedin.com/company/the-tech-hub-com/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://www.twitter.com/thetechhuborg" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+        </div>
       </div>
     </footer>
   );
