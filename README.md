@@ -11,7 +11,7 @@ The Tech Hub is an organization focused on promoting knowledge sharing, collabor
 
 ## Website
 
-Visit our website at [www.the-tech-hub-org.web.app](https://www.the-tech-hub-org.web.app) to explore a wide range of resources, articles, tutorials, and projects related to various technology domains. Stay updated with the latest tech trends, industry news, and events.
+Visit our website at [www.the-tech-hub-org.web.app](https://the-tech-hub-org.web.app) to explore a wide range of resources, articles, tutorials, and projects related to various technology domains. Stay updated with the latest tech trends, industry news, and events.
 
 ## Repository
 
