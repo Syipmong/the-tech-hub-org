@@ -1,0 +1,128 @@
+.bottom-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #050023;
+    color: #fff;
+    padding: 20px;
+}
+
+.bottom-navigation-header {
+    flex-basis: 100%;
+    text-align: left;
+    margin-left: 78px;
+}
+
+.bottom-navigation-title {
+    color: #FFF;
+    font-family: Satoshi;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.bottom-navigation-description {
+    opacity: 0.8;
+    color: #FFF;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.bottom-navigation-section {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.bottom-navigation-heading {
+    margin: 30px;
+    margin-left: 78px;
+    color: #FFF;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bottom-navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-navigation-item {
+    margin-bottom: 30px;
+    margin-left: 78px;
+    color: #FFF;
+    text-align: left;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bottom-navigation-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom-navigation-item a:hover {
+    text-decoration: underline;
+}
+
+.bottom-navigation-item.active a {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.bottom-navigation {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #050023;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.bottom-navigation-header {
+    flex-basis: 100%;
+    text-align: left;
+    margin-left: 78px;
+}
+
+/* ... other styles ... */
+
+.bottom-right-section {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.bottom-navigation-icons {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 20px;
+    left: 80px;
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.bottom-navigation-icons i {
+    font-size: 30px;
+}
+
+.linkedin , .twitter{
+    width: 50px;
+    height: 50px;
+    margin: 0 40px 0 0px;
+}

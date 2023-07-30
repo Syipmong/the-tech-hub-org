@@ -1,13 +1,19 @@
-
 .header {
-  background-color: #D9D9D9;
+  background-color: #ffffff;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  height: 40px;
+  height: 60px;
+  background-color: transparent;
 }
 
 .menu {
@@ -31,7 +37,7 @@
 }
 
 .menu-item a {
-  color: #FF0606;
+  color: #111111;;
   text-decoration: none;
   font-size: 16px;
 }
@@ -41,14 +47,24 @@
   text-decoration: underline;
 }
 
-.logo {
+.right {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.logo img {
-  height: 60px;
-  background-color: transparent;
+.letstalk-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #D9D9D9;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.letstalk-btn:hover {
+  background-color: #0056b3;
 }
 
 .menu-toggle {
@@ -94,5 +110,9 @@
     height: 100%;
     display: block;
     transform: translateY(40%);
+  }
+
+  .right {
+    align-items: flex-end;
   }
 }

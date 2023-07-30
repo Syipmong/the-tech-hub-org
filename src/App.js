@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
@@ -10,6 +10,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Article from './components/Article';
 import WaitList from './components/WaitList';
+import BottomNavigation from './components/BottomNavigation';
 
 const App = () => {
   return (
@@ -26,7 +27,8 @@ const App = () => {
         <Route path="/articles/:id" element={<Article />} />
 
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
+      <BottomNavigation/>
     </Router>
   );
 };
