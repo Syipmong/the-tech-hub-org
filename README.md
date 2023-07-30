@@ -1,3 +1,6 @@
+## today 30th July @syipmong made some major update to the website
+
+
 # The Tech Hub
 
 Welcome to The Tech Hub, a vibrant community dedicated to exploring and advancing technology!
