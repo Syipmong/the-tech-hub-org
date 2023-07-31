@@ -40,6 +40,7 @@ const CreateArticle = () => {
         imageUrls: imageUrls,
       });
 
+
       setTitle('');
       setContent('');
       setAuthor('');

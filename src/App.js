@@ -14,9 +14,6 @@ import BottomNavigation from './components/BottomNavigation';
 import ArticlePage from './components/ArticlePage';
 import ArticlesList from './components/ArticleList';
 import ArticleCRUD from './components/ArticleCRUD';
-import CreateArticle from './components/CreateArticle';
-import UpdateArticle from './components/UpdateArticle';
-import ReadArticle from './components/ReadArticle';
 
 const App = () => {
   return (
@@ -30,12 +27,14 @@ const App = () => {
         <Route path='/waitlist' element={<WaitList />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/articles/" element={<ArticlesList />} />
-        <Route path="/articlespage/:id" element={<ArticlePage />} />
-        <Route path="/crud" element={<ArticleCRUD />} />
-        <Route path="/create-article" element={<CreateArticle />} />
-        <Route path="/update-article-article" element={<UpdateArticle />} />
-        <Route path="/read" element={<ReadArticle />} />
+        <Route path="/articles" element={<ArticlesList />} />
+        {/* New route for the ArticlePage component */}
+        <Route path="/articles/:id" element={<ArticlePage />} />
+        {/* <Route path="/articlespage/:id" element={<ArticlePage />} /> */}
+        <Route path="/blogs/*" element={<ArticleCRUD />} />
+        {/* <Route path="/create-article" element={<CreateArticle />} /> */}
+        {/* <Route path="/update-article-article" element={<UpdateArticle />} /> */}
+        {/* <Route path="/read" element={<ReadArticle />} /> */}
       </Routes>
       {/* <Footer /> */}
       <BottomNavigation/>

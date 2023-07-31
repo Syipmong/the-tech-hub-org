@@ -1,12 +1,50 @@
+/* ArticleList.css */
 .articles-list-container {
-    max-width: 806px;
-    margin-left: 60px;
-    padding: 10px;
-    margin-bottom: 110px;
-  }
-  
-  .articles-list-container h2 {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.articles-list-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.articles-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.articles-list-container li {
+  margin-bottom: 10px;
+}
+
+.articles-list-container li a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.articles-list-container li a:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.articles-list-container div {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 30px;
+}

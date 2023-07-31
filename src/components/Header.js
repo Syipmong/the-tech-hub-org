@@ -33,7 +33,7 @@ const Header = () => {
             <Link to="/services">Services</Link>
           </li>
           <li className="menu-item">
-            <Link to="/crud">Articles</Link>
+            <Link to="/blogs">Articles</Link>
           </li>
         </ul>
       </nav>
