@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
+import { auth, firestore } from '../firebase';
 import './SignUp.css';
 
 const SignUp = () => {
@@ -9,6 +9,10 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [age, setAge] = useState('');
+  const [gender, setGender] = useState('');
+  const [country, setCountry] = useState('');
+  const [interests, setInterests] = useState([]);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -19,11 +23,26 @@ const SignUp = () => {
     }
 
     try {
+      // Create the user using Firebase Authentication
       await auth.createUserWithEmailAndPassword(email, password);
       const user = auth.currentUser;
+
+      // Update the user profile with the display name
       await user.updateProfile({
         displayName: name
       });
+
+      // Store the userDetails in Firestore
+      const userDetails = {
+        name: name,
+        email: email,
+        age: age,
+        gender: gender,
+        country: country,
+        interests: interests
+      };
+      await firestore.collection('users').add(userDetails);
+
       navigate('/');
 
     } catch (error) {
@@ -72,6 +91,50 @@ const SignUp = () => {
             id="confirmPassword"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="gender">Gender:</label>
+          <select
+            id="gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+            required
+          >
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="country">Country:</label>
+          <input
+            type="text"
+            id="country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="interests">Interests:</label>
+          <input
+            type="text"
+            id="interests"
+            value={interests}
+            onChange={(e) => setInterests(e.target.value.split(','))}
             required
           />
         </div>

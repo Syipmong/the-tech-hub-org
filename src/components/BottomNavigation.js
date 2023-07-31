@@ -1,11 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BottomNavigation.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const BottomNavigation = () => {
+
+  const twitterURL = 'https://www.twitter.com/thetechhuborg';
+  const linkedinURL = 'https://www.linkedin.com/company/the-tech-hub-com/';
+
   return (
+
+    
     <div className="bottom-navigation">
       <div className="bottom-navigation-header">
         <div className="bottom-navigation-title">The Tech Hub</div>
@@ -44,13 +51,17 @@ const BottomNavigation = () => {
       </div>
 
       <div className="bottom-navigation-section bottom-right-section">
-        <div className="bottom-navigation-text">Be the first to know</div>
-        <button className="bottom-navigation-button">Subscribe</button>
+        <div className="bottom-navigation-text">Be the first to know</div><br/>
+        <Link to="/waitlist" className="cta-button bottom-navigation-button">Join Now</Link>
       </div>
 
       <div className="bottom-navigation-icons">
-        <FontAwesomeIcon className='twitter' icon={faTwitter} />
-        <FontAwesomeIcon className='linkedin' icon={faLinkedin} />
+      <a href={twitterURL} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon className='twitter' icon={faTwitter} />
+        </a>
+        <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon className='linkedin' icon={faLinkedin} />
+        </a>
       </div>
     </div>
   );

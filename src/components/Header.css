@@ -30,6 +30,10 @@
 
 .menu-item {
   margin-left: 20px;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .menu-item:first-child {
@@ -37,7 +41,8 @@
 }
 
 .menu-item a {
-  color: #111111;;
+  color: #111111;
+  ;
   text-decoration: none;
   font-size: 16px;
 }
@@ -100,10 +105,12 @@
 
   .menu-list {
     flex-direction: column;
+
   }
 
   .menu-item {
     margin: 10px 0;
+
   }
 
   .menu-toggle {

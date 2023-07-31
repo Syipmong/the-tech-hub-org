@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
-
 import './SignIn.css';
 
 const SignIn = () => {
@@ -14,8 +13,7 @@ const SignIn = () => {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-
-      navigate('/');
+      navigate('/dashboard');
     } catch (error) {
       console.error('Error signing in:', error.message);
     }

@@ -1,3 +1,4 @@
+// Services.js
 import React from 'react';
 import './Services.css';
 
@@ -12,6 +13,11 @@ const Services = () => {
         <li>UI/UX Design</li>
         <li>Cloud Computing</li>
         <li>E-commerce Solutions</li>
+        <li>Blockchain Development</li>
+        <li>Artificial Intelligence</li>
+        <li>Internet of Things (IoT)</li>
+        <li>Cybersecurity Services</li>
+        <li>Game Development</li>
       </ul>
     </div>
   );
