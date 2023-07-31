@@ -1,40 +1,29 @@
-/* Article.css */
-
 .article {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.article img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
+.article-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
-.article h3 {
-  font-size: 24px;
+.article-details {
+  flex: 1;
+}
+
+.article h2 {
   margin-bottom: 10px;
 }
 
 .article p {
-  color: #888;
   margin-bottom: 10px;
 }
 
-.article .read-more {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.article .read-more:hover {
-  background-color: #0056b3;
+.article-content {
+  line-height: 1.6;
+  font-size: 16px;
 }

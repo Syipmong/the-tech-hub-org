@@ -1,0 +1,44 @@
+.crud-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .crud-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .crud-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .crud-nav li {
+    margin-right: 10px;
+  }
+  
+  .crud-nav li:last-child {
+    margin-right: 0;
+  }
+  
+  .crud-nav a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .crud-nav a:hover {
+    border-bottom: 2px solid #007BFF;
+  }
+  
+  .crud-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  

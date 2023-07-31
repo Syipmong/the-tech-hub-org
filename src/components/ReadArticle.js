@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Article.css';
+import { useParams } from 'react-router-dom';
 import { firestore } from '../firebase';
 
-const Article = ({ id }) => {
+const ReadArticle = () => {
+  const { id } = useParams();
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
+    // Fetch the article data from Firestore
     const fetchArticle = async () => {
       try {
         const docRef = firestore.collection('articles').doc(id);
         const docSnapshot = await docRef.get();
 
         if (docSnapshot.exists) {
+          // Set the article data in the component state
           setArticle(docSnapshot.data());
         } else {
           console.log('No such document!');
@@ -26,26 +28,17 @@ const Article = ({ id }) => {
   }, [id]);
 
   if (!article) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // Render a loading message while fetching the article data
   }
 
-  const { title, author, date, content, imageUrl } = article;
+  const { title, content } = article;
 
   return (
-    <div className="article">
-      <img src={imageUrl} alt={title} className="article-image" />
-      <div className="article-details">
-        <h2>{title}</h2>
-        <p>By {author} | {date}</p>
-        <div className="article-content">
-          {content}
-        </div>
-        <Link to={`/articles/${id}`} className="read-more">
-          Read More
-        </Link>
-      </div>
+    <div>
+      <h2>{title}</h2>
+      <div>{content}</div>
     </div>
   );
 };
 
-export default Article;
+export default ReadArticle;

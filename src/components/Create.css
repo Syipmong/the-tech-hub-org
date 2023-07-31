@@ -1,0 +1,72 @@
+.create-article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.create-article-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.create-article-container form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.create-article-container label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.create-article-container input[type="text"],
+.create-article-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.create-article-container textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.create-article-container input[type="file"] {
+  display: none;
+}
+
+.create-article-container .image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.create-article-container .image-preview {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.create-article-container .upload-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-article-container .upload-button:hover {
+  background-color: #0056b3;
+}

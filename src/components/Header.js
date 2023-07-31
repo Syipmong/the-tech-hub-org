@@ -33,13 +33,13 @@ const Header = () => {
             <Link to="/services">Services</Link>
           </li>
           <li className="menu-item">
-            <Link to="/articles">Articles</Link>
+            <Link to="/crud">Articles</Link>
           </li>
         </ul>
       </nav>
 
       <div className="right">
-        <button className="letstalk-btn">Let's Talk</button>
+        <button className="letstalk-btn">Student</button>
         <button className="menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? (
             <FontAwesomeIcon className="side_btn" icon={faTimesCircle} />

@@ -1,0 +1,12 @@
+.articles-list-container {
+    max-width: 806px;
+    margin-left: 60px;
+    padding: 10px;
+    margin-bottom: 110px;
+  }
+  
+  .articles-list-container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
