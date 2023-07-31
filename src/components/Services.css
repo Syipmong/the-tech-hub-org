@@ -1,4 +1,8 @@
-/* Services.css */
+.service-page{
+  background-color: #007BFF;
+  margin: 0;
+  padding: 0;
+}
 .services-container {
   max-width: 800px;
   margin: 0 auto;

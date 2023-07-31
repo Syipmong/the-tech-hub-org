@@ -11,6 +11,7 @@ import SignUp from './components/SignUp';
 import Article from './components/Article';
 import WaitList from './components/WaitList';
 import BottomNavigation from './components/BottomNavigation';
+import ArticlePage from './components/ArticlePage';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/articles/:id" element={<Article />} />
+        <Route path="/articlespage/:id" element={<ArticlePage />} />
 
       </Routes>
       {/* <Footer /> */}

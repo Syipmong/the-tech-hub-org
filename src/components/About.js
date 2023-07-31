@@ -4,6 +4,7 @@ import './About.css';
 
 const About = () => {
   return (
+    <div className='about-page'>
     <div className="about-container">
       <h2>About Us</h2>
       <p>
@@ -16,6 +17,7 @@ const About = () => {
         solutions. We specialize in web development, mobile app development, and data analytics, helping our clients
         stay ahead in the digital era.
       </p>
+    </div>
     </div>
   );
 };

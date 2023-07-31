@@ -4,6 +4,7 @@ import './Services.css';
 
 const Services = () => {
   return (
+    <div className='service-page'>
     <div className="services-container">
       <h2>Our Services</h2>
       <ul>
@@ -19,6 +20,7 @@ const Services = () => {
         <li>Cybersecurity Services</li>
         <li>Game Development</li>
       </ul>
+    </div>
     </div>
   );
 };
