@@ -54,6 +54,7 @@ const BottomNavigation = () => {
         <div className="bottom-navigation-text">Be the first to know</div><br/>
         <Link to="/waitlist" className="cta-button bottom-navigation-button">Join Now</Link>
       </div>
+      {/* No update for now */}
 
       <div className="bottom-navigation-icons">
       <a href={twitterURL} target="_blank" rel="noopener noreferrer">
