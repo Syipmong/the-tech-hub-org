@@ -1,4 +1,4 @@
-## today 30th July @syipmong made some major update to the website
+
 
 
 # The Tech Hub
