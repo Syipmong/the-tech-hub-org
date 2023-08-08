@@ -117,12 +117,11 @@
   padding: 10px;
   margin-top: 20px; 
 }
-
 .testimonials {
   padding: 80px 0;
   text-align: center;
-  background: rgba(213, 226, 226, 0.5);
-  background-image: url('../assets/images/homebg.jpg');
+  background-color: #D5E2E2DD; 
+  background-image: linear-gradient(rgba(213, 226, 226, 0.7), rgba(213, 226, 226, 0.7)), url('../assets/images/homebg.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -148,8 +147,8 @@
   margin-left: 40px;
 }
 
-.testimonial-text p{
-  color: #fff;
+.testimonial-text p {
+  color: #000;
 }
 
 .testimonial-image img {
@@ -163,9 +162,11 @@
   margin-left: 20px;
 }
 
-.testimonial-text .ceo, .testimonials h2{
+.testimonial-text .ceo,
+.testimonials h2 {
   color: #007BFF;
 }
+
 
 .newsletter {
   background-color: #f5f5f5;
@@ -365,3 +366,60 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Add this to your existing Home.css */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 20px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.mobile-menu-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10000;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-icon.open {
+  transform: rotate(90deg);
+}
+
+

@@ -51,13 +51,6 @@ const Home = () => {
           <p>We are committed to providing exceptional service to our clients.</p>
         </div>
       </section>
-
-      {/* <section className="newsletter">
-        <h2>Join our Waitlist</h2>
-        <p>Be the first to know about our updates when we roll out.</p>
-        <Link to="/waitlist" className="cta-button">Join Now</Link>
-      </section> */}
-
 <section className="testimonials">
   <h2>What Our Team Says</h2>
   <div className="testimonial-container">
