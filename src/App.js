@@ -14,6 +14,7 @@ import BottomNavigation from './components/BottomNavigation';
 import ArticlePage from './components/ArticlePage';
 import ArticlesList from './components/ArticleList';
 import ArticleCRUD from './components/ArticleCRUD';
+import StudentDashboard from './components/StudentDashboard';
 
 const App = () => {
   return (
@@ -28,9 +29,9 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/articles" element={<ArticlesList />} />
-        {/* New route for the ArticlePage component */}
+        <Route path="/studentdashboard" element={<StudentDashboard />} />
+
         <Route path="/articles/:id" element={<ArticlePage />} />
-        {/* <Route path="/articlespage/:id" element={<ArticlePage />} /> */}
         <Route path="/blogs/*" element={<ArticleCRUD />} />
         {/* <Route path="/create-article" element={<CreateArticle />} /> */}
         {/* <Route path="/update-article-article" element={<UpdateArticle />} /> */}
