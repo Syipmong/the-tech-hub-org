@@ -1,0 +1,36 @@
+/* Analytics.css */
+
+.analytics-section {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.analytics-content {
+    
+}
+
+
+.analytics-content .bar-chart {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.analytics-content .bar {
+    background-color: #007bff;
+    width: 30px; 
+    flex-grow: 1;
+    border-radius: 4px 4px 0 0;
+}
+
+.analytics-content .bar-label {
+    text-align: center;
+    margin-top: 0.5rem;
+}

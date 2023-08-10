@@ -1,0 +1,43 @@
+/* Assignment.css */
+
+.assignment-upload-section {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.assignment-upload-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.assignment-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.assignment-upload-form label {
+    font-size: 1.2rem;
+}
+
+.assignment-upload-form input[type="file"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.assignment-upload-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.assignment-upload-form button:hover {
+    background-color: #0056b3;
+}

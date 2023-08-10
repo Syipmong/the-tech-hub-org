@@ -1,17 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 import logo from '../assets/images/logov2.png';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore'; // Import Firestore module
+
+// New component for handling routing and conditions
+const StudentButton = ({ isAuthenticatedAsStudent }) => {
+  return (
+    <Link
+      to={isAuthenticatedAsStudent ? '/studentdashboard' : '/signup'}
+      className="stdnt-btn"
+    >
+      Student
+    </Link>
+  );
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAuthenticatedAsStudent, setIsAuthenticatedAsStudent] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    // Check authentication status and student enrollment here
+    const checkStudentStatus = async () => {
+      try {
+        const user = firebase.auth().currentUser;
+
+        if (user) {
+          const firestore = firebase.firestore();
+          const usersRef = firestore.collection('users'); 
+
+          const userDoc = await usersRef.doc(user.uid).get();
+
+          if (userDoc.exists) {
+            const userData = userDoc.data();
+            setIsAuthenticatedAsStudent(userData.isStudent);
+          }
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    checkStudentStatus();
+  }, []);
 
   return (
     <header className={`header ${isMenuOpen ? 'open' : ''}`}>
@@ -39,7 +80,7 @@ const Header = () => {
       </nav>
 
       <div className="right">
-        <button className="letstalk-btn">Student</button>
+        <StudentButton isAuthenticatedAsStudent={isAuthenticatedAsStudent} />
         <button className="menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? (
             <FontAwesomeIcon className="side_btn" icon={faTimesCircle} />

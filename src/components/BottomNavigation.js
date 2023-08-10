@@ -22,7 +22,7 @@ const BottomNavigation = () => {
       </div>
 
       <div className="bottom-navigation-section">
-        <div className="bottom-navigation-heading">Services</div>
+        <div className="bottom-navigation-heading">Services</div>                                               
         <ul className="bottom-navigation-list">
           <li className="bottom-navigation-item">Web Development</li>
           <li className="bottom-navigation-item">Mobile App Development</li>
@@ -52,7 +52,7 @@ const BottomNavigation = () => {
 
       <div className="bottom-navigation-section bottom-right-section">
         <div className="bottom-navigation-text">Be the first to know</div><br/>
-        <Link to="/waitlist" className="cta-button bottom-navigation-button">Join Now</Link>
+        <Link to="/waitlist" className="cta-button bottom-navigation-button">subscribe</Link>
       </div>
       {/* No update for now */}
 

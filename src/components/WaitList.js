@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import './Waitlist.css';
 
 const WaitList = () => {
   const [name, setName] = useState('');
