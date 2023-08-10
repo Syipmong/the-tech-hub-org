@@ -23,16 +23,13 @@ const SignUp = () => {
     }
 
     try {
-      // Create the user using Firebase Authentication
       await auth.createUserWithEmailAndPassword(email, password);
       const user = auth.currentUser;
 
-      // Update the user profile with the display name
       await user.updateProfile({
         displayName: name
       });
 
-      // Store the userDetails in Firestore
       const userDetails = {
         name: name,
         email: email,
@@ -43,7 +40,7 @@ const SignUp = () => {
       };
       await firestore.collection('users').add(userDetails);
 
-      navigate('/');
+      navigate('/studentdashboard');
 
     } catch (error) {
       console.error('Error signing up:', error.message);

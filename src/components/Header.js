@@ -9,6 +9,18 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore'; // Import Firestore module
 
+// New component for handling routing and conditions
+const StudentButton = ({ isAuthenticatedAsStudent }) => {
+  return (
+    <Link
+      to={isAuthenticatedAsStudent ? '/studentdashboard' : '/signup'}
+      className="stdnt-btn"
+    >
+      Student
+    </Link>
+  );
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthenticatedAsStudent, setIsAuthenticatedAsStudent] = useState(false);
@@ -25,7 +37,7 @@ const Header = () => {
 
         if (user) {
           const firestore = firebase.firestore();
-          const usersRef = firestore.collection('users'); // Update this to your Firestore collection name
+          const usersRef = firestore.collection('users'); 
 
           const userDoc = await usersRef.doc(user.uid).get();
 
@@ -68,12 +80,7 @@ const Header = () => {
       </nav>
 
       <div className="right">
-        <Link
-          to={isAuthenticatedAsStudent ? '/studentdashboard' : '/signup'}
-          className="stdnt-btn"
-        >
-          Student
-        </Link>
+        <StudentButton isAuthenticatedAsStudent={isAuthenticatedAsStudent} />
         <button className="menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? (
             <FontAwesomeIcon className="side_btn" icon={faTimesCircle} />

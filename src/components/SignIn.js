@@ -13,7 +13,7 @@ const SignIn = () => {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      navigate('/dashboard');
+      navigate('/studentdashboard');
     } catch (error) {
       console.error('Error signing in:', error.message);
     }

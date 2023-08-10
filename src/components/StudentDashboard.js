@@ -1,29 +1,78 @@
-import React from 'react';
-import '../components/StudentDashBoard.css'; // Import your CSS file for styling
+import React, { useEffect, useState } from 'react';
+import '../components/StudentDashBoard.css';
+
+import Profile from './dashboard/student/Profile';
+import AssignmentUpload from './dashboard/student/Assignment';
+import CourseInformation from './dashboard/student/CourseInfo';
+import Notifications from './dashboard/student/Notifications';
+import Analytics from './dashboard/student/Analytics';
+import { auth } from '../firebase'; 
 
 const StudentDashboard = () => {
-  // Replace this with actual student data or API calls
-  const studentName = "John Doe";
-  const courses = [
-    { id: 1, title: "Introduction to Web Development", instructor: "Jane Smith" },
-    { id: 2, title: "Database Design Fundamentals", instructor: "Alex Johnson" },
-    { id: 3, title: "React Mastery", instructor: "Michael Brown" },
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        setUser(authUser);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  if (!user) {
+    return <div>Loading...</div>;
+  }
+
+  const studentName = user.displayName || "Student";
+
+
+  const uid = user.uid;
+
+  // const userData = {
+    
+  //   name: studentName,
+    
+  // };
+
+  const selectedCourse = {
+    
+    id: 1,
+    title: "Introduction to Web Development",
+    instructor: "Jane Smith",
+   
+  };
+
+  const notifications = [
+    
+    { id: 1, text: "Your assignment is due tomorrow." },
+    { id: 2, text: "New course added: Database Design Fundamentals" },
+   
   ];
+
+  const performanceData = {
+    
+    averageGrade: 85,
+    progress: 75,
+    
+  };
 
   return (
     <div className="student-dashboard">
       <div className="dashboard-header">
         <h1>Welcome, {studentName}!</h1>
-        <p>Your Courses:</p>
       </div>
-      <div className="course-list">
-        {courses.map(course => (
-          <div className="course-card" key={course.id}>
-            <h2>{course.title}</h2>
-            <p>Instructor: {course.instructor}</p>
-            <button className="course-btn">Go to Course</button>
-          </div>
-        ))}
+      <div className="dashboard-content">
+        <Profile uid={uid} />
+        <AssignmentUpload />
+        <CourseInformation selectedCourse={selectedCourse} />
+        <Notifications notifications={notifications} />
+        <Analytics performanceData={performanceData} />
       </div>
     </div>
   );
