@@ -55,9 +55,9 @@ const Header = () => {
     checkStudentStatus();
   }, []);
 
-  // Show loading or nothing until authentication check is complete
+  
   if (!authCheckComplete) {
-    return null; // or loading indicator
+    return <p>loading...</p>; 
   }
 
   return (
