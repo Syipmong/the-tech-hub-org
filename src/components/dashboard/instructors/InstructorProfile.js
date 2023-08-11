@@ -6,4 +6,4 @@ function InstructorProfile() {
     )
 }
 
-export default InstructorProfile
+export default InstructorProfile;

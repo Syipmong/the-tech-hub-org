@@ -7,9 +7,8 @@ import './Header.css';
 import logo from '../assets/images/logov2.png';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import 'firebase/compat/firestore'; // Import Firestore module
+import 'firebase/compat/firestore'; 
 
-// New component for handling routing and conditions
 const StudentButton = ({ isAuthenticatedAsStudent }) => {
   return (
     <Link
@@ -24,13 +23,13 @@ const StudentButton = ({ isAuthenticatedAsStudent }) => {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthenticatedAsStudent, setIsAuthenticatedAsStudent] = useState(false);
+  const [authCheckComplete, setAuthCheckComplete] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
-    // Check authentication status and student enrollment here
     const checkStudentStatus = async () => {
       try {
         const user = firebase.auth().currentUser;
@@ -46,6 +45,8 @@ const Header = () => {
             setIsAuthenticatedAsStudent(userData.isStudent);
           }
         }
+        
+        setAuthCheckComplete(true); // Set authentication check as complete
       } catch (error) {
         console.error(error);
       }
@@ -53,6 +54,11 @@ const Header = () => {
 
     checkStudentStatus();
   }, []);
+
+  // Show loading or nothing until authentication check is complete
+  if (!authCheckComplete) {
+    return null; // or loading indicator
+  }
 
   return (
     <header className={`header ${isMenuOpen ? 'open' : ''}`}>

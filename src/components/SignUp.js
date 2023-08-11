@@ -31,6 +31,7 @@ const SignUp = () => {
       });
 
       const userDetails = {
+        uid: user.uid,
         name: name,
         email: email,
         age: age,
@@ -38,7 +39,7 @@ const SignUp = () => {
         country: country,
         interests: interests
       };
-      await firestore.collection('users').add(userDetails);
+      await firestore.collection('users').doc(user.uid).set(userDetails);
 
       navigate('/studentdashboard');
 
