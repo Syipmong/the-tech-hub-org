@@ -46,7 +46,7 @@ const Header = () => {
           }
         }
         
-        setAuthCheckComplete(true); // Set authentication check as complete
+        setAuthCheckComplete(true);
       } catch (error) {
         console.error(error);
       }
