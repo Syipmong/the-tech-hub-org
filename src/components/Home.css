@@ -329,15 +329,22 @@
 
   .hero-content {
     max-width: 100%;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 24px;
+    font-size: 50px;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
   }
 
   .hero p {
-    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
     margin-bottom: 20px;
+    line-height: 1;
   }
 
   .cta-button {
@@ -346,7 +353,8 @@
   }
 
   .features {
-    padding: 40px 0;
+    margin: 15px;
+    padding: 40px 20px;
     justify-content: center;
   }
 
@@ -359,7 +367,13 @@
 
   .feature h2,
   .feature p {
-    top: 0;
+    position: relative;
+    padding: 10px;
+    margin: 30px auto;
+    top: 50px;
+  }
+  .ellipse-before-header{
+    top: 10px;
   }
 
   .article-list {
