@@ -5,8 +5,8 @@ import Profile from './dashboard/student/Profile';
 import AssignmentUpload from './dashboard/student/Assignment';
 import CourseInformation from './dashboard/student/CourseInfo';
 import Notifications from './dashboard/student/Notifications';
-import Analytics from './dashboard/student/Analytics';
 import { auth } from '../firebase'; 
+import Projects from './dashboard/student/Projects';
 
 const StudentDashboard = () => {
   const [user, setUser] = useState(null);
@@ -26,7 +26,7 @@ const StudentDashboard = () => {
   }, []);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div>You need to signup to have access...</div>;
   }
 
   const studentName = user.displayName || "Student";
@@ -72,7 +72,7 @@ const StudentDashboard = () => {
         <AssignmentUpload />
         <CourseInformation selectedCourse={selectedCourse} />
         <Notifications notifications={notifications} />
-        <Analytics performanceData={performanceData} />
+        <Projects performanceData={performanceData} />
       </div>
     </div>
   );
