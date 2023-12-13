@@ -12,7 +12,7 @@ const Home = () => {
     <div className="homepage">
       <section className="hero">
         <div className="hero-content">
-          <h1>S.T.A.R.C.S</h1>
+          <h1>S.T.A.R.C.S Technologies</h1>
           <p>Discover the latest in technology and innovation.</p>
           <Link to="/signin" className="cta-button">Get Started</Link>
         </div>
