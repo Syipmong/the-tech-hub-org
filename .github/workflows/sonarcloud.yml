@@ -43,6 +43,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Clean the workspace
+        uses: docker://alpine
+        with:
+         args: /bin/sh -c "find \"${GITHUB_WORKSPACE}\" -mindepth 1 ! -name . -prune -exec rm -rf {} +"
+
       - name: Analyze with SonarCloud
 
         # You can pin the exact commit or the version.
