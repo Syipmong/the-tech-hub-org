@@ -49,7 +49,7 @@ a{
 }
 
 
-.menu-item a:hover {
+.menu-item a:hover , .menu-item a:active {
   color: #fff;
   background-color: #007bff;
   border-radius: 5px;
