@@ -27,7 +27,7 @@ We welcome contributions from anyone interested in technology and its various di
 - Follow us on social media (Twitter, LinkedIn) to stay updated with our latest activities and announcements.
 - `Twitter` https://twitter.com/thetechhuborg
 - `Linkedin` https://www.linkedin.com/company/the-tech-hub-com/
-- `Discord` https://discord.com/invite/vSrVwUMyrC
+<!-- - `Discord` https://discord.com/invite/vSrVwUMyrC -->
 
 We believe that together, we can build a vibrant community that fosters learning, collaboration, and innovation in the world of technology.
 
