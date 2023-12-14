@@ -15,6 +15,7 @@ import ArticlePage from './components/ArticlePage';
 import ArticlesList from './components/ArticleList';
 import ArticleCRUD from './components/ArticleCRUD';
 import StudentDashboard from './components/StudentDashboard';
+// import LandingPage from './components/LandingPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path='/' element={<LandingPage/>} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
