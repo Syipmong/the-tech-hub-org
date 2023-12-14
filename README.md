@@ -1,4 +1,4 @@
-<!-- Tests -->
+
 [![Node.js CI](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/node.js.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/node.js.yml)  [![CodeQL](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/codeql.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/codeql.yml)  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=The-Tech-Hub-org_the-tech-hub-org&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=The-Tech-Hub-org_the-tech-hub-org)  [![SonarCloud analysis](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/sonarcloud.yml)
 
 # The Tech Hub
