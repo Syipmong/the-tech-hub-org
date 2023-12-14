@@ -1,8 +1,5 @@
 
-[![Node.js CI](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/node.js.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/node.js.yml) [![CodeQL](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/codeql.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/codeql.yml)
-
-
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=The-Tech-Hub-org_the-tech-hub-org)](https://sonarcloud.io/summary/new_code?id=The-Tech-Hub-org_the-tech-hub-org)
+[![Node.js CI](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/node.js.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/node.js.yml)  [![CodeQL](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/codeql.yml/badge.svg)](https://github.com/The-Tech-Hub-org/the-tech-hub-org/actions/workflows/codeql.yml)  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=The-Tech-Hub-org_the-tech-hub-org&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=The-Tech-Hub-org_the-tech-hub-org)
 
 # The Tech Hub
 
